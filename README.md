@@ -56,12 +56,12 @@ The app runs on http://localhost:3000
 To switch models, update the .env file:
 
 ```env
-REACT_APP_LLM_PROVIDER=openai   # or 'claude' or 'gemini
+REACT_APP_LLM_PROVIDER=openai   # or 'claude' or 'gemini'
 ```
 Restart the app after making changes.
 
 ## Features
-Expert Auto Assistant Only: Chatbot is trained to respond strictly to car-related problems.
+Expert Auto Assistant Only: Chatbot is trained to respond strictly to car-related problems. [This can be done for Claude / Gemini too)
 
 Follow-up Friendly: Supports chained queries and follow-up suggestions.
 
