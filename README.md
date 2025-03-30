@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# 🚗 AutoFix Pro Assistant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**AutoFix Pro Assistant** is an advanced AI-powered chatbot designed specifically for automotive troubleshooting and support. It assists users with vehicle-related issues using conversational intelligence, while offering a modern, responsive UI and multi-model LLM backend.
 
-## Available Scripts
+# Live Demo: https://auto-fix-chat-bot-pro.vercel.app/
 
-In the project directory, you can run:
+## 🌟 What’s New in Pro Version (v2.0) vs. AutoFix v1.0
 
-### `npm start`
+| Feature Area             | v1.0                           | Pro Version (v2.0)                                                                 |
+|-------------------------|--------------------------------|-------------------------------------------------------------------------------------|
+| **LLM Support**         | GPT-3.5 Turbo (only)           | Plug-and-play support for OpenAI (ChatGPT), Claude, and Gemini APIs                |
+| **Model Flexibility**   | Hardcoded ChatGPT              | Backend-driven model switching with `.env` configuration                           |
+| **Domain Control**      | General Automotive Replies     | Strict automotive expert logic—refuses unrelated questions                         |
+| **UI Design**           | Basic Chat UI                  | Full-screen, modern, minimalist ChatGPT-style interface with sidebar for history   |
+| **Voice Support**       | Limited, no visual feedback    | 🎙️ Built-in audio-to-text support using Whisper API                               |
+| **Structured Replies**  | Single paragraph               | Cleaner structured text blocks with improved readability                           |
+| **Export Feature**      | Text file download             | Enhanced chat download with one-click save                                        |
+| **Robust Error Handling** | Minimal                      | Better detection for API issues, mic access errors, empty input, offline status    |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Setup
 
-### `npm test`
+### 1. Clone the Repo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/nanjana/AutoFix-ChatBot---Pro.git
+cd autofixpro
+```
 
-### `npm run build`
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3. Create Environment File
+Create a .env file based on the .env.example template:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```ini
+REACT_APP_LLM_PROVIDER=openai
+REACT_APP_OPENAI_API_KEY=your_openai_key_here
+# (Optional for future use)
+# REACT_APP_CLAUDE_API_KEY=your_claude_key
+# REACT_APP_GEMINI_API_KEY=your_gemini_key
+```
+❗ Never commit your .env file. It's already added to .gitignore.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Run Locally
+```bash
+npm start
+```
 
-### `npm run eject`
+The app runs on http://localhost:3000
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## LLM Switching
+To switch models, update the .env file:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+env
+REACT_APP_LLM_PROVIDER=openai   # or 'claude' or 'gemini'
+Restart the app after making changes.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Features
+Expert Auto Assistant Only: Chatbot is trained to respond strictly to car-related problems.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Follow-up Friendly: Supports chained queries and follow-up suggestions.
 
-## Learn More
+Mic Support: Voice input via Whisper API (OpenAI).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Export Chat: Save conversation as a .txt file.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Offline and Error Awareness: Alerts user of API failures, bad input, and network issues.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
