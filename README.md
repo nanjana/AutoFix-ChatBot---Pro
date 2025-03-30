@@ -55,8 +55,9 @@ The app runs on http://localhost:3000
 ## LLM Switching
 To switch models, update the .env file:
 
-env
-REACT_APP_LLM_PROVIDER=openai   # or 'claude' or 'gemini'
+```env
+REACT_APP_LLM_PROVIDER=openai   # or 'claude' or 'gemini
+```
 Restart the app after making changes.
 
 ## Features
